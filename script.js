@@ -1,153 +1,234 @@
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
+/* ==================================================
+   MALSTIL
+   JAVASCRIPT
+================================================== */
+
+
+/* ==================================================
+   MOBILE MENU
+================================================== */
+
+const menuToggle =
+    document.getElementById("menu-toggle");
+
+const mobileMenu =
+    document.getElementById("mobile-menu");
+
 const mobileMenuOverlay =
     document.getElementById("mobile-menu-overlay");
 
 
 function openMenu() {
 
-    menuToggle.classList.add("active");
-    mobileMenu.classList.add("active");
-    mobileMenuOverlay.classList.add("active");
+    if (!menuToggle || !mobileMenu) {
+        return;
+    }
 
-    document.body.style.overflow = "hidden";
+    menuToggle.classList.add("active");
+
+    mobileMenu.classList.add("active");
+
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.add("active");
+    }
+
+    document.body.classList.add("menu-open");
 
     menuToggle.setAttribute(
         "aria-expanded",
         "true"
     );
 
-    menuToggle.setAttribute(
-        "aria-label",
-        "Menü schließen"
+    mobileMenu.setAttribute(
+        "aria-hidden",
+        "false"
     );
+
 }
 
 
 function closeMenu() {
 
-    menuToggle.classList.remove("active");
-    mobileMenu.classList.remove("active");
-    mobileMenuOverlay.classList.remove("active");
+    if (!menuToggle || !mobileMenu) {
+        return;
+    }
 
-    document.body.style.overflow = "";
+    menuToggle.classList.remove("active");
+
+    mobileMenu.classList.remove("active");
+
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove("active");
+    }
+
+    document.body.classList.remove("menu-open");
 
     menuToggle.setAttribute(
         "aria-expanded",
         "false"
     );
 
-    menuToggle.setAttribute(
-        "aria-label",
-        "Menü öffnen"
+    mobileMenu.setAttribute(
+        "aria-hidden",
+        "true"
     );
+
 }
 
 
-/* Menü öffnen / schließen */
+if (menuToggle) {
 
-menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener(
+        "click",
+        function () {
 
-    const isOpen =
-        mobileMenu.classList.contains("active");
+            if (
+                mobileMenu &&
+                mobileMenu.classList.contains("active")
+            ) {
 
-    if (isOpen) {
-        closeMenu();
-    } else {
-        openMenu();
-    }
+                closeMenu();
 
-});
+            } else {
 
+                openMenu();
 
-/* Menü schließen bei Klick auf einen Link */
+            }
 
-const mobileLinks =
-    mobileMenu.querySelectorAll("a");
+        }
+    );
 
-mobileLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-        closeMenu();
-    });
-
-});
+}
 
 
-/* Menü schließen bei Klick auf Overlay */
+/* ==================================================
+   OVERLAY SCHLIESST MENU
+================================================== */
 
-mobileMenuOverlay.addEventListener(
-    "click",
-    function () {
-        closeMenu();
-    }
-);
+if (mobileMenuOverlay) {
+
+    mobileMenuOverlay.addEventListener(
+        "click",
+        closeMenu
+    );
+
+}
 
 
-/* Menü mit ESC schließen */
+/* ==================================================
+   MOBILE MENU LINKS
+================================================== */
+
+if (mobileMenu) {
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+    mobileLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                closeMenu
+            );
+
+        }
+    );
+
+}
+
+
+/* ==================================================
+   ESCAPE SCHLIESST MENU
+================================================== */
 
 document.addEventListener(
     "keydown",
     function (event) {
 
         if (event.key === "Escape") {
+
             closeMenu();
+
         }
 
     }
 );
 
-/* =========================================
+
+/* ==================================================
    SCROLL REVEAL
-   ========================================= */
+================================================== */
 
 const revealElements =
-    document.querySelectorAll(
-        ".section-heading, .service-card, .why-card, .portfolio-item, .contact-intro, .contact-details, .contact-form-wrapper"
-    );
+    document.querySelectorAll(".reveal");
 
 
-revealElements.forEach(function (element) {
+if (
+    "IntersectionObserver"
+    in window
+) {
 
-    element.classList.add("reveal");
+    const revealObserver =
+        new IntersectionObserver(
+            function (entries) {
 
-});
+                entries.forEach(
+                    function (entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
 
-const revealObserver =
-    new IntersectionObserver(
-        function (entries) {
+    revealElements.forEach(
+        function (element) {
 
-            entries.forEach(function (entry) {
+            revealObserver.observe(
+                element
+            );
 
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    revealObserver.unobserve(
-                        entry.target
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
         }
     );
 
 
-revealElements.forEach(function (element) {
+} else {
 
-    revealObserver.observe(element);
+    revealElements.forEach(
+        function (element) {
 
-});
+            element.classList.add(
+                "visible"
+            );
 
-/* =========================================
+        }
+    );
+
+}
+
+
+/* ==================================================
    KONTAKTFORMULAR
-   ========================================= */
+================================================== */
 
 const contactForm =
     document.querySelector(".contact-form");
@@ -159,99 +240,186 @@ const successReset =
     document.getElementById("success-reset");
 
 
-contactForm.addEventListener("submit", async function (event) {
-
-    event.preventDefault();
-
-
-    const submitButton =
-        contactForm.querySelector(
-            'button[type="submit"]'
-        );
+if (
+    contactForm &&
+    formSuccess
+) {
 
 
-    const originalText =
-        submitButton.textContent;
+    contactForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            /*
+             * Verhindert die normale Weiterleitung
+             * zu Web3Forms.
+             */
+
+            event.preventDefault();
 
 
-    submitButton.disabled = true;
-
-    submitButton.textContent =
-        "Wird gesendet …";
-
-
-    const formData =
-        new FormData(contactForm);
+            const submitButton =
+                contactForm.querySelector(
+                    'button[type="submit"]'
+                );
 
 
-    try {
+            if (!submitButton) {
+                return;
+            }
 
-        const response = await fetch(
-            contactForm.action,
-            {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "Accept": "application/json"
+
+            const originalText =
+                submitButton.textContent;
+
+
+            submitButton.disabled = true;
+
+            submitButton.textContent =
+                "Wird gesendet …";
+
+
+            const formData =
+                new FormData(contactForm);
+
+
+            try {
+
+
+                const response =
+                    await fetch(
+                        contactForm.action,
+                        {
+                            method: "POST",
+
+                            body: formData,
+
+                            headers: {
+                                "Accept":
+                                    "application/json"
+                            }
+                        }
+                    );
+
+
+                const result =
+                    await response.json();
+
+
+                if (
+                    response.ok &&
+                    result.success
+                ) {
+
+
+                    /*
+                     * Formular ausblenden
+                     */
+
+                    contactForm.style.display =
+                        "none";
+
+
+                    /*
+                     * Erfolgsmeldung anzeigen
+                     */
+
+                    formSuccess.classList.add(
+                        "active"
+                    );
+
+
+                    /*
+                     * Formular zurücksetzen
+                     */
+
+                    contactForm.reset();
+
+
+                    /*
+                     * Erfolgsmeldung ins Sichtfeld
+                     */
+
+                    formSuccess.scrollIntoView(
+                        {
+                            behavior: "smooth",
+                            block: "center"
+                        }
+                    );
+
+
+                } else {
+
+
+                    throw new Error(
+                        "Formular konnte nicht gesendet werden."
+                    );
+
                 }
+
+
+            } catch (error) {
+
+
+                console.error(
+                    "Formularfehler:",
+                    error
+                );
+
+
+                alert(
+                    "Die Anfrage konnte gerade nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
+                );
+
+
+                submitButton.disabled =
+                    false;
+
+
+                submitButton.textContent =
+                    originalText;
+
+
+            }
+
+        }
+    );
+
+
+    /* ==================================================
+       WEITERE ANFRAGE
+    ================================================== */
+
+    if (successReset) {
+
+        successReset.addEventListener(
+            "click",
+            function () {
+
+
+                formSuccess.classList.remove(
+                    "active"
+                );
+
+
+                contactForm.style.display =
+                    "";
+
+
+                contactForm.reset();
+
+
+                contactForm.scrollIntoView(
+                    {
+                        behavior: "smooth",
+                        block: "center"
+                    }
+                );
+
+
             }
         );
 
-
-        const result =
-            await response.json();
-
-
-        if (response.ok && result.success) {
-
-            contactForm.style.display =
-                "none";
-
-            formSuccess.classList.add(
-                "active"
-            );
-
-            formSuccess.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-            contactForm.reset();
-
-        } else {
-
-            throw new Error(
-                "Formular konnte nicht gesendet werden."
-            );
-
-        }
-
-
-    } catch (error) {
-
-        alert(
-            "Leider konnte die Anfrage nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
-        );
-
-        submitButton.disabled = false;
-
-        submitButton.textContent =
-            originalText;
-
     }
 
-});
-
-successReset.addEventListener("click", function () {
-
-    formSuccess.classList.remove("active");
-
-    contactForm.style.display = "";
-
-    contactForm.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
-
-});
-
+}
