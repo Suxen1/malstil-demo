@@ -1,0 +1,1982 @@
+/* =========================================
+   MALSTIL – PREMIUM LANDINGPAGE
+   ========================================= */
+
+
+/* ---------- Grundlayout ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f1ea;
+    color: #222222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ---------- Navigation ---------- */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1400px;
+    margin: auto;
+    padding: 30px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+.nav-button {
+    border: 1px solid #222;
+    padding: 12px 20px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+    min-height: 100vh;
+
+    max-width: 1400px;
+    margin: auto;
+
+    padding: 140px 60px 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    opacity: 0.6;
+}
+
+h1 {
+    font-size: clamp(55px, 6vw, 95px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -4px;
+}
+
+h1 span,
+h2 span {
+    display: block;
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 500px;
+    margin: 35px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.primary-button {
+    display: inline-block;
+
+    background: #222;
+    color: white;
+
+    padding: 17px 28px;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    background: #444;
+}
+
+
+/* ---------- Hero Bild ---------- */
+
+
+.hero-image {
+    height: 650px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.8s ease;
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.18),
+        transparent 45%
+    );
+
+    pointer-events: none;
+}
+
+.hero-image:hover img {
+    transform: scale(1.03);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 30px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 70px;
+}
+
+h2 {
+    font-size: clamp(45px, 5vw, 75px);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -3px;
+}
+
+
+/* ---------- Leistungen ---------- */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+
+    background: #222;
+}
+
+.service-card {
+    background: #f5f1ea;
+
+    padding: 50px;
+
+    min-height: 250px;
+
+    transition: background 0.3s ease;
+}
+
+.service-card:hover {
+    background: #e8e1d7;
+}
+
+.service-number {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+.service-card h3 {
+    font-size: 28px;
+    margin: 30px 0 15px;
+    font-weight: 400;
+}
+
+.service-card p {
+    color: #666;
+    max-width: 400px;
+}
+
+
+/* ---------- Über uns ---------- */
+
+.about {
+    max-width: none;
+
+    background: #222;
+    color: #f5f1ea;
+
+    padding: 150px 10%;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about p:not(.eyebrow) {
+    max-width: 650px;
+    margin-top: 35px;
+
+    font-size: 20px;
+    color: #ccc;
+}
+
+
+/* ---------- Referenzen ---------- */
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.reference-card {
+    height: 420px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #cfc5b7,
+            #9f9485
+        );
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 25px;
+
+    color: white;
+
+    transition: transform 0.4s ease;
+}
+
+.reference-card:hover {
+    transform: translateY(-8px);
+}
+
+.reference-card span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* ---------- Kontakt ---------- */
+
+.contact {
+    max-width: none;
+
+    background: #ded5c8;
+
+    text-align: center;
+
+    padding: 150px 30px;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact-content p:not(.eyebrow) {
+    margin: 30px auto;
+
+    max-width: 600px;
+
+    font-size: 18px;
+    color: #555;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: #222;
+    color: white;
+
+    padding: 50px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 120px 25px 60px;
+
+        gap: 50px;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    section {
+        padding: 90px 25px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reference-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reference-card {
+        height: 350px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .service-card {
+        padding: 35px;
+    }
+
+}
+
+/* =========================================
+   WARUM MALSTIL
+   ========================================= */
+
+.why-malstil {
+    max-width: none;
+    padding: 140px 8%;
+    background: #222222;
+    color: #f5f1ea;
+}
+
+
+/* ---------- Intro ---------- */
+
+.why-intro {
+    max-width: 900px;
+    margin-bottom: 90px;
+}
+
+.why-intro .eyebrow {
+    color: #f5f1ea;
+    opacity: 0.55;
+}
+
+.why-intro h2 {
+    max-width: 850px;
+}
+
+.why-description {
+    max-width: 650px;
+    margin-top: 40px;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    color: #c9c4bd;
+}
+
+
+/* ---------- Karten ---------- */
+
+.why-grid {
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid rgba(245, 241, 234, 0.2);
+    border-left: 1px solid rgba(245, 241, 234, 0.2);
+}
+
+.why-card {
+    position: relative;
+
+    min-height: 320px;
+
+    padding: 45px;
+
+    border-right: 1px solid rgba(245, 241, 234, 0.2);
+    border-bottom: 1px solid rgba(245, 241, 234, 0.2);
+
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease;
+}
+
+.why-card:hover {
+    background: rgba(245, 241, 234, 0.05);
+}
+
+
+/* ---------- Nummer ---------- */
+
+.why-number {
+    display: block;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    color: #aaa39a;
+}
+
+
+/* ---------- Icon ---------- */
+
+.why-icon {
+    margin-top: 45px;
+
+    font-size: 28px;
+
+    color: #d8cbb9;
+}
+
+
+/* ---------- Überschrift ---------- */
+
+.why-card h3 {
+    margin-top: 25px;
+
+    font-size: 27px;
+    font-weight: 400;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ---------- Text ---------- */
+
+.why-card p {
+    max-width: 430px;
+
+    margin-top: 18px;
+
+    color: #aaa7a1;
+
+    line-height: 1.7;
+}
+
+
+/* ---------- Unterer Bereich ---------- */
+
+.why-bottom {
+    max-width: 1200px;
+
+    margin-top: 80px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid rgba(245, 241, 234, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.why-bottom p {
+    max-width: 550px;
+
+    font-size: 21px;
+    line-height: 1.5;
+
+    color: #d4d0ca;
+}
+
+
+/* =========================================
+   WARUM MALSTIL – MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .why-malstil {
+        padding: 100px 25px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        min-height: auto;
+        padding: 35px;
+    }
+
+    .why-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .why-intro {
+        margin-bottom: 60px;
+    }
+
+    .why-description {
+        font-size: 16px;
+    }
+
+    .why-card h3 {
+        font-size: 24px;
+    }
+
+    .why-bottom p {
+        font-size: 18px;
+    }
+
+}
+
+```css
+/* =========================================
+   PREMIUM REFERENZEN / PORTFOLIO
+   ========================================= */
+
+.references {
+    max-width: 1400px;
+    padding: 150px 60px;
+}
+
+
+/* ---------- Intro ---------- */
+
+.references-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 60px;
+
+    margin-bottom: 80px;
+}
+
+.references-intro h2 {
+    max-width: 750px;
+}
+
+.references-description {
+    max-width: 360px;
+
+    margin-bottom: 8px;
+
+    color: #666;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ---------- Portfolio Grid ---------- */
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: 1.35fr 1fr;
+
+    gap: 70px 30px;
+
+    align-items: start;
+}
+
+
+/* ---------- Portfolio Item ---------- */
+
+.portfolio-item {
+    cursor: pointer;
+}
+
+
+/* ---------- Großes erstes Projekt ---------- */
+
+.portfolio-large {
+    grid-row: span 2;
+}
+
+
+/* ---------- Bild ---------- */
+
+.portfolio-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    background: #ddd5ca;
+}
+
+.portfolio-large .portfolio-image {
+    height: 700px;
+}
+
+
+/* ---------- Bild selbst ---------- */
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.8s ease;
+}
+
+
+/* ---------- Hover ---------- */
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.045);
+
+    filter: brightness(0.78);
+}
+
+
+/* ---------- Overlay ---------- */
+
+.portfolio-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    color: white;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5),
+            transparent 55%
+        );
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay span {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.portfolio-arrow {
+    font-size: 28px !important;
+
+    letter-spacing: 0 !important;
+}
+
+
+/* ---------- Projektinformationen ---------- */
+
+.portfolio-info {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #d4cec5;
+
+    margin-top: 18px;
+}
+
+.portfolio-info h3 {
+    margin: 0;
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+    letter-spacing: -0.5px;
+}
+
+.portfolio-info p {
+    margin-top: 6px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: #777;
+}
+
+.portfolio-info > span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #999;
+}
+
+
+/* ---------- Unterer CTA ---------- */
+
+.references-bottom {
+    margin-top: 110px;
+
+    padding-top: 40px;
+
+    border-top: 1px solid #d4cec5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.references-bottom p {
+    font-size: 20px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   REFERENZEN – TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .references {
+        padding: 100px 25px;
+    }
+
+    .references-intro {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+        margin-bottom: 60px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .portfolio-large {
+        grid-row: auto;
+    }
+
+    .portfolio-image,
+    .portfolio-large .portfolio-image {
+        height: 500px;
+    }
+
+}
+
+
+/* =========================================
+   REFERENZEN – SMARTPHONE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .references {
+        padding: 90px 20px;
+    }
+
+    .portfolio-grid {
+        gap: 50px;
+    }
+
+    .portfolio-image,
+    .portfolio-large .portfolio-image {
+        height: 380px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 20px;
+    }
+
+    .portfolio-info p {
+        font-size: 10px;
+    }
+
+    .references-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-top: 80px;
+    }
+
+}
+
+/* =========================================
+   KONTAKT – PREMIUM CTA & FORMULAR
+   ========================================= */
+
+.contact {
+    max-width: none;
+
+    padding: 150px 8%;
+
+    background: #ded5c8;
+
+    color: #222;
+}
+
+
+/* ---------- Intro ---------- */
+
+.contact-intro {
+    max-width: 900px;
+
+    margin-bottom: 90px;
+}
+
+.contact-intro h2 {
+    max-width: 850px;
+}
+
+.contact-lead {
+    max-width: 620px;
+
+    margin-top: 35px;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    color: #5f5a54;
+}
+
+
+/* ---------- Layout ---------- */
+
+.contact-layout {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.75fr 1.25fr;
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+
+/* ---------- Kontaktdaten ---------- */
+
+.contact-details {
+    padding-top: 10px;
+}
+
+.contact-label {
+    margin-bottom: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #777067;
+}
+
+.contact-details h3 {
+    font-size: 34px;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+.contact-role {
+    margin-top: 5px;
+
+    color: #716b63;
+}
+
+
+/* ---------- Kontaktinformationen ---------- */
+
+.contact-info {
+    margin-top: 60px;
+}
+
+.contact-item {
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(34, 34, 34, 0.2);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.contact-item:last-child {
+    border-bottom: 1px solid rgba(34, 34, 34, 0.2);
+}
+
+.contact-item span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #817a71;
+}
+
+.contact-item a {
+    font-size: 17px;
+
+    transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+    opacity: 0.5;
+}
+
+
+/* ---------- Kontakt-Hinweis ---------- */
+
+.contact-note {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 45px;
+
+    align-items: flex-start;
+}
+
+.contact-note span {
+    font-size: 20px;
+
+    color: #8d7962;
+}
+
+.contact-note p {
+    max-width: 300px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #666057;
+}
+
+
+/* =========================================
+   FORMULAR
+   ========================================= */
+
+.contact-form-wrapper {
+    background: #f5f1ea;
+
+    padding: 55px;
+}
+
+
+/* ---------- Formular ---------- */
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #6f6961;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 16px 0;
+
+    border: none;
+
+    border-bottom: 1px solid #c9c1b7;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    color: #222;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa39b;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-bottom-color: #222;
+}
+
+
+/* ---------- Formular Footer ---------- */
+
+.form-footer {
+    margin-top: 20px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #d8d0c6;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.form-footer p {
+    max-width: 280px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #888078;
+}
+
+
+/* ---------- Button ---------- */
+
+.form-footer .primary-button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+}
+
+
+/* =========================================
+   KONTAKT – TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .contact {
+        padding: 100px 25px;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .contact-form-wrapper {
+        padding: 40px;
+    }
+
+}
+
+
+/* =========================================
+   KONTAKT – SMARTPHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .contact {
+        padding: 90px 20px;
+    }
+
+    .contact-intro {
+        margin-bottom: 60px;
+    }
+
+    .contact-lead {
+        font-size: 16px;
+    }
+
+    .contact-details h3 {
+        font-size: 29px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px 22px;
+    }
+
+    .form-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .form-footer .primary-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   SECTION CTA
+   ========================================= */
+
+.section-cta {
+    margin-top: 70px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid #d4cec5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.section-cta p {
+    font-size: 18px;
+
+    color: #666;
+}
+
+.section-cta .primary-button {
+    white-space: nowrap;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .section-cta {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .section-cta .primary-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   MOBILE HAMBURGER MENÜ
+   ========================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 22px;
+    height: 1.5px;
+
+    background: #222;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ---------- Mobile Menü ---------- */
+
+.mobile-menu {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 20;
+
+    background: #f5f1ea;
+
+    padding: 120px 30px 40px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+}
+
+.mobile-menu a {
+    font-size: 34px;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+.mobile-menu-button {
+    margin-top: 25px;
+
+    padding: 16px 22px;
+
+    background: #222;
+
+    color: white !important;
+
+    font-size: 14px !important;
+
+    letter-spacing: 1px;
+}
+
+
+/* ---------- Menü geöffnet ---------- */
+
+.mobile-menu.active {
+    display: flex;
+}
+
+
+/* ---------- X Animation ---------- */
+
+.menu-toggle.active {
+    position: relative;
+
+    z-index: 30;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 20px 25px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+/* =========================================
+   MOBILE FEINSCHLIFF
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- Navigation ---------- */
+
+    header {
+        position: absolute;
+    }
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    .logo {
+        font-size: 19px;
+        letter-spacing: 3px;
+    }
+
+
+    /* ---------- Hero ---------- */
+
+    .hero {
+        min-height: auto;
+
+        padding: 115px 20px 50px;
+
+        gap: 45px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(48px, 14vw, 68px);
+
+        line-height: 0.94;
+
+        letter-spacing: -2.5px;
+    }
+
+    .hero-text {
+        margin: 28px 0;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .hero .primary-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* ---------- Hero Bild ---------- */
+
+    .hero-image {
+        height: 400px;
+    }
+
+
+    /* ---------- Allgemeine Sections ---------- */
+
+    section {
+        padding: 85px 20px;
+    }
+
+    h2 {
+        font-size: clamp(40px, 11vw, 52px);
+
+        letter-spacing: -2px;
+    }
+
+
+    /* ---------- Leistungen ---------- */
+
+    .service-card {
+        padding: 35px 25px;
+
+        min-height: 220px;
+    }
+
+    .service-card h3 {
+        font-size: 25px;
+
+        margin: 25px 0 12px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .section-cta {
+        margin-top: 50px;
+
+        padding-top: 30px;
+    }
+
+    .section-cta p {
+        font-size: 16px;
+    }
+
+
+    /* ---------- Warum Malstil ---------- */
+
+    .why-malstil {
+        padding: 90px 20px;
+    }
+
+    .why-intro {
+        margin-bottom: 60px;
+    }
+
+    .why-description {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .why-card {
+        padding: 30px 25px;
+    }
+
+    .why-card h3 {
+        font-size: 23px;
+    }
+
+
+    /* ---------- Portfolio ---------- */
+
+    .references {
+        padding: 90px 20px;
+    }
+
+    .references-intro {
+        margin-bottom: 55px;
+    }
+
+    .references-description {
+        font-size: 15px;
+    }
+
+    .portfolio-image,
+    .portfolio-large .portfolio-image {
+        height: 380px;
+    }
+
+    .portfolio-info {
+        padding-top: 18px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 19px;
+    }
+
+
+    /* ---------- Kontakt ---------- */
+
+    .contact {
+        padding: 90px 20px;
+    }
+
+    .contact-intro {
+        margin-bottom: 60px;
+    }
+
+    .contact-lead {
+        font-size: 16px;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    .form-footer .primary-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   MOBILE MENU OVERLAY
+   ========================================= */
+
+.mobile-menu-overlay {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 19;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Overlay sichtbar */
+
+.mobile-menu-overlay.active {
+    display: block;
+
+    opacity: 1;
+}
+
+
+/* Menü liegt über dem Overlay */
+
+.mobile-menu {
+    z-index: 20;
+}
+
+/* =========================================
+   HERO TRUST
+   ========================================= */
+
+.hero-trust {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .hero-trust {
+        flex-wrap: wrap;
+
+        gap: 7px 10px;
+
+        font-size: 9px;
+
+        line-height: 1.6;
+    }
+
+}
+
+/* =========================================
+   FINAL FEINSCHLIFF – BUTTONS
+   ========================================= */
+
+.primary-button,
+.nav-button,
+.mobile-menu-button {
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.nav-button:hover {
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   FINAL FEINSCHLIFF – BILDER
+   ========================================= */
+
+.hero-image img,
+.portfolio-image img {
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.8s ease;
+}
+
+.hero-image img {
+    object-position: center center;
+}
+
+.portfolio-image img {
+    object-position: center center;
+}
+
+/* =========================================
+   FINAL FEINSCHLIFF – SCROLL ANIMATION
+   ========================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #222;
+
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+
+    .reveal {
+        transform: translateY(15px);
+
+        transition-duration: 0.6s;
+    }
+
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* =========================================
+   FORMULAR ERFOLGSMELDUNG
+   ========================================= */
+
+.form-success {
+    display: none;
+
+    min-height: 450px;
+
+    padding: 60px 40px;
+
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background: #f5f1ea;
+}
+
+
+/* Wird nach erfolgreichem Versand angezeigt */
+
+.form-success.active {
+    display: flex;
+}
+
+
+.success-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #222;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+
+.form-success h3 {
+    margin-top: 15px;
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+
+.form-success > p:not(.eyebrow) {
+    max-width: 500px;
+
+    margin: 20px auto 30px;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.success-reset {
+    padding: 14px 20px;
+
+    border: 1px solid #222;
+
+    background: transparent;
+
+    color: #222;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.success-reset:hover {
+    background: #222;
+
+    color: #fff;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .form-success {
+        min-height: 400px;
+
+        padding: 45px 25px;
+    }
+
+    .form-success h3 {
+        font-size: 30px;
+    }
+
+    .form-success > p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+    .success-reset {
+        width: 100%;
+    }
+
+}
+
