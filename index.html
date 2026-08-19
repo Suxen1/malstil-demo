@@ -5,68 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Malstil – David Soujon | Malerei & Raumgestaltung</title>
+    <meta
+        name="description"
+        content="Malstil – Malermeister David Soujon & Jana Goble-Soujon. Hochwertige Malerarbeiten, Raumgestaltung und individuelle Oberflächen."
+    >
+
+    <title>
+        Malstil – David Soujon & Jana Goble-Soujon
+    </title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-   <nav>
 
-    <div class="logo">
-        MALSTIL
-    </div>
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
 
+<header>
 
-    <!-- DESKTOP NAVIGATION -->
-    <div class="nav-links">
+    <nav>
 
-        <a href="#leistungen">
-            Leistungen
+        <a href="#top" class="logo">
+            MALSTIL
         </a>
 
-        <a href="#ueber-uns">
-            Über uns
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <div class="nav-links">
+
+            <a href="#leistungen">
+                Leistungen
+            </a>
+
+            <a href="#ueber-uns">
+                Über uns
+            </a>
+
+            <a href="#referenzen">
+                Referenzen
+            </a>
+
+            <a href="#kontakt">
+                Kontakt
+            </a>
+
+        </div>
+
+
+        <a
+            href="#kontakt"
+            class="nav-button"
+        >
+            Projekt anfragen
         </a>
 
-        <a href="#referenzen">
-            Referenzen
-        </a>
 
-        <a href="#kontakt">
-            Kontakt
-        </a>
+        <!-- MOBILE HAMBURGER -->
 
-    </div>
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </nav>
+
+</header>
 
 
-    <a href="#kontakt" class="nav-button">
-        Projekt anfragen
-    </a>
+<!-- ==================================================
+     MOBILE OVERLAY
+================================================== -->
+
+<div
+    class="mobile-menu-overlay"
+    id="mobile-menu-overlay"
+    aria-hidden="true"
+></div>
 
 
-    <!-- MOBILE HAMBURGER -->
-    <button
-        class="menu-toggle"
-        id="menu-toggle"
-        aria-label="Menü öffnen"
-        aria-expanded="false"
-    >
+<!-- ==================================================
+     MOBILE MENU
+================================================== -->
 
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </button>
-
-</nav>
-
-<!-- MOBILE MENU OVERLAY -->
-<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-
-<!-- MOBILE MENÜ -->
-<div class="mobile-menu" id="mobile-menu">
+<div
+    class="mobile-menu"
+    id="mobile-menu"
+    aria-hidden="true"
+>
 
     <a href="#leistungen">
         Leistungen
@@ -84,182 +124,228 @@
         Kontakt
     </a>
 
-    <a href="#kontakt" class="mobile-menu-button">
+    <a
+        href="#kontakt"
+        class="mobile-menu-button"
+    >
         Projekt anfragen →
     </a>
 
 </div>
 
-    <!-- HAUPTBEREICH -->
-    <main>
 
 
-        <!-- HERO -->
-        <section class="hero">
+<!-- ==================================================
+     MAIN
+================================================== -->
 
-            <div class="hero-content">
-
-                <p class="eyebrow">
-    MALERHANDWERK · RAUMGESTALTUNG
-</p>
-
-<h1>
-    Räume mit
-    <span>Charakter.</span>
-</h1>
-
-<p class="hero-text">
-    Hochwertige Malerarbeiten und individuelle
-    Raumgestaltung für Räume, die mehr können als
-    nur gut aussehen.
-</p>
-
-<a href="#kontakt" class="primary-button">
-    Projekt anfragen →
-</a>
-<div class="hero-trust">
-
-      <span>Individuelle Beratung</span>
-
-      <span>·</span>
-
-      <span>Saubere Ausführung</span>
-
-      <span>·</span>
-
-      <span>Persönliche Betreuung</span>
-
-  </div>
-
-</div>
-
-            <!-- HERO BILD -->
-            <div class="hero-image">
-
-                <img
-                    src="hero.jpg"
-                    alt="Hochwertig gestalteter Wohnraum">
-
-            </div>
-
-        </section>
+<main id="top">
 
 
+<!-- ==================================================
+     HERO
+================================================== -->
 
-        <!-- LEISTUNGEN -->
-        <section id="leistungen" class="services">
-<div class="section-heading">
+<section class="hero">
 
-    <p class="eyebrow">
-        LEISTUNGEN
-    </p>
+    <div class="hero-content reveal">
 
-    <h2>
-        Gestaltung, die
-        <span>zu Ihnen passt.</span>
-    </h2>
-
-</div>
-
-<div class="service-grid">
-
-    <article class="service-card">
-
-        <span class="service-number">
-            01
-        </span>
-
-        <h3>
-            Malerarbeiten
-        </h3>
-
-        <p>
-            Präzise und saubere Malerarbeiten für Innenräume –
-            von klassischen Anstrichen bis zur individuellen
-            Farbgestaltung.
+        <p class="eyebrow">
+            MALERMEISTER · MALEREI · RAUMGESTALTUNG
         </p>
 
-    </article>
+        <h1>
+            Räume mit
+            <span>Charakter.</span>
+        </h1>
 
-
-    <article class="service-card">
-
-        <span class="service-number">
-            02
-        </span>
-
-        <h3>
-            Raumgestaltung
-        </h3>
-
-        <p>
-            Farben und Oberflächen, die zu Ihrem Raum,
-            Ihrem Stil und der gewünschten Atmosphäre passen.
+        <p class="hero-text">
+            Hochwertige Malerarbeiten und individuelle
+            Raumgestaltung für Räume, die mehr können als
+            nur gut aussehen.
         </p>
 
-    </article>
+        <a
+            href="#kontakt"
+            class="primary-button"
+        >
+            Projekt anfragen →
+        </a>
 
 
-    <article class="service-card">
+        <div class="hero-trust">
 
-        <span class="service-number">
-            03
-        </span>
+            <span>
+                Individuelle Beratung
+            </span>
 
-        <h3>
-            Oberflächen
-        </h3>
+            <span>·</span>
 
-        <p>
-            Besondere Oberflächen und hochwertige
-            Gestaltungstechniken für individuelle Räume
-            mit Charakter.
+            <span>
+                Saubere Ausführung
+            </span>
+
+            <span>·</span>
+
+            <span>
+                Persönliche Betreuung
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO BILD -->
+
+    <div class="hero-image reveal">
+
+        <img
+            src="hero.jpg"
+            alt="Hochwertig gestalteter Innenraum"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     LEISTUNGEN
+================================================== -->
+
+<section
+    id="leistungen"
+    class="services"
+>
+
+    <div class="section-heading reveal">
+
+        <p class="eyebrow">
+            LEISTUNGEN
         </p>
 
-    </article>
+        <h2>
+            Gestaltung, die
+            <span>zu Ihnen passt.</span>
+        </h2>
+
+    </div>
 
 
-    <article class="service-card">
+    <div class="service-grid">
 
-        <span class="service-number">
-            04
-        </span>
 
-        <h3>
-            Renovierung
-        </h3>
+        <article class="service-card reveal">
+
+            <span class="service-number">
+                01
+            </span>
+
+            <h3>
+                Malerarbeiten
+            </h3>
+
+            <p>
+                Präzise und saubere Malerarbeiten für
+                Innenräume – von klassischen Anstrichen
+                bis zur individuellen Farbgestaltung.
+            </p>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <span class="service-number">
+                02
+            </span>
+
+            <h3>
+                Raumgestaltung
+            </h3>
+
+            <p>
+                Farben und Oberflächen, die zu Ihrem Raum,
+                Ihrem Stil und der gewünschten Atmosphäre
+                passen.
+            </p>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <span class="service-number">
+                03
+            </span>
+
+            <h3>
+                Oberflächengestaltung
+            </h3>
+
+            <p>
+                Besondere Oberflächen und hochwertige
+                Gestaltungstechniken für individuelle Räume
+                mit Charakter.
+            </p>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <span class="service-number">
+                04
+            </span>
+
+            <h3>
+                Renovierung
+            </h3>
+
+            <p>
+                Bestehende Räume auffrischen, verändern
+                und wieder neu zur Geltung bringen –
+                sorgfältig geplant und umgesetzt.
+            </p>
+
+        </article>
+
+
+    </div>
+
+
+    <div class="section-cta reveal">
 
         <p>
-            Bestehende Räume auffrischen, verändern und
-            wieder neu zur Geltung bringen – sorgfältig
-            geplant und umgesetzt.
+            Sie wissen bereits, was Sie verändern möchten?
         </p>
 
-    </article>
+        <a
+            href="#kontakt"
+            class="primary-button"
+        >
+            Projekt anfragen →
+        </a>
 
-</div>
+    </div>
 
-<div class="section-cta">
-
-    <p>
-        Sie wissen bereits, was Sie verändern möchten?
-    </p>
-
-    <a href="#kontakt" class="primary-button">
-        Projekt anfragen →
-    </a>
-
-</div>
-
-        </section>
+</section>
 
 
 
-        <!-- ÜBER UNS -->
-        <!-- WARUM MALSTIL -->
-<section id="ueber-uns" class="why-malstil">
+<!-- ==================================================
+     WARUM MALSTIL
+================================================== -->
 
-    <div class="why-intro">
+<section
+    id="ueber-uns"
+    class="why-malstil"
+>
+
+
+    <div class="why-intro reveal">
 
         <p class="eyebrow">
             WARUM MALSTIL
@@ -271,19 +357,21 @@
         </h2>
 
         <p class="why-description">
-    Jeder Raum hat seinen eigenen Charakter.
-    Mit handwerklicher Präzision, ausgewählten Farben
-    und einem Gespür für Details entstehen Lösungen,
-    die nicht nur sauber ausgeführt sind, sondern
-    langfristig überzeugen.
-</p>
+            Jeder Raum hat seinen eigenen Charakter.
+            Mit handwerklicher Präzision, ausgewählten
+            Farben und einem Gespür für Details entstehen
+            Lösungen, die nicht nur sauber ausgeführt sind,
+            sondern langfristig überzeugen.
+        </p>
 
     </div>
 
 
+
     <div class="why-grid">
 
-        <article class="why-card">
+
+        <article class="why-card reveal">
 
             <span class="why-number">
                 01
@@ -298,15 +386,15 @@
             </h3>
 
             <p>
-                Sorgfältige Vorbereitung, saubere Ausführung und
-                ein Auge fürs Detail bilden die Grundlage jedes
-                Projekts.
+                Sorgfältige Vorbereitung, saubere Ausführung
+                und ein Auge fürs Detail bilden die Grundlage
+                jedes Projekts.
             </p>
 
         </article>
 
 
-        <article class="why-card">
+        <article class="why-card reveal">
 
             <span class="why-number">
                 02
@@ -321,15 +409,15 @@
             </h3>
 
             <p>
-                Farben, Materialien und Oberflächen werden passend
-                zu Ihren Räumen und Ihren persönlichen Vorstellungen
-                ausgewählt.
+                Farben, Materialien und Oberflächen werden
+                passend zu Ihren Räumen und Ihren persönlichen
+                Vorstellungen ausgewählt.
             </p>
 
         </article>
 
 
-        <article class="why-card">
+        <article class="why-card reveal">
 
             <span class="why-number">
                 03
@@ -344,15 +432,15 @@
             </h3>
 
             <p>
-                Von der ersten Idee bis zur Umsetzung erhalten Sie
-                eine persönliche Begleitung und eine Lösung, die
-                zu Ihrem Projekt passt.
+                Von der ersten Idee bis zur Umsetzung erhalten
+                Sie eine persönliche Begleitung und eine Lösung,
+                die zu Ihrem Projekt passt.
             </p>
 
         </article>
 
 
-        <article class="why-card">
+        <article class="why-card reveal">
 
             <span class="why-number">
                 04
@@ -374,32 +462,46 @@
 
         </article>
 
+
     </div>
 
 
-    <div class="why-bottom">
+
+    <div class="why-bottom reveal">
 
         <p>
             Für Räume, die nicht einfach nur renoviert,
             sondern individuell gestaltet werden.
         </p>
 
-        <a href="#kontakt" class="primary-button">
+        <a
+            href="#kontakt"
+            class="primary-button"
+        >
             Projekt besprechen →
         </a>
 
     </div>
 
+
 </section>
 
 
 
-<!-- REFERENZEN -->
-<section id="referenzen" class="references">
+<!-- ==================================================
+     REFERENZEN
+================================================== -->
 
-    <div class="references-intro">
+<section
+    id="referenzen"
+    class="references"
+>
+
+
+    <div class="references-intro reveal">
 
         <div>
+
             <p class="eyebrow">
                 AUSGEWÄHLTE PROJEKTE
             </p>
@@ -408,7 +510,9 @@
                 Räume mit
                 <span>Persönlichkeit.</span>
             </h2>
+
         </div>
+
 
         <p class="references-description">
             Einblicke in ausgewählte Arbeiten und individuelle
@@ -418,22 +522,28 @@
     </div>
 
 
+
     <div class="portfolio-grid">
 
+
         <!-- PROJEKT 01 -->
-        <article class="portfolio-item portfolio-large">
+
+        <article
+            class="portfolio-item portfolio-large reveal"
+        >
 
             <div class="portfolio-image">
 
                 <img
                     src="images/projekt-01.jpg"
-                    alt="Ausgewähltes Malstil-Projekt"
+                    alt="Malstil Projekt 01 – individuelle Raumgestaltung"
+                    loading="lazy"
                 >
 
                 <div class="portfolio-overlay">
 
                     <span>
-                        Projekt Lehmputz
+                        Projekt 01
                     </span>
 
                     <span class="portfolio-arrow">
@@ -444,40 +554,54 @@
 
             </div>
 
+
             <div class="portfolio-info">
 
                 <div>
+
                     <h3>
                         Individuelle Raumgestaltung
                     </h3>
 
                     <p>
-                        Farbkonzept · Wandgestaltung · <a href="https://www.instagram.com/p/DQr-BoJjROa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Quelle</a>
+                        Farbkonzept · Wandgestaltung
                     </p>
+
                 </div>
 
-                <span>
-                </span>
+                <a
+                    href="https://www.instagram.com/p/DQr-BoJjROa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Projekt 01 auf Instagram ansehen"
+                >
+                    ↗
+                </a>
 
             </div>
 
         </article>
 
 
+
         <!-- PROJEKT 02 -->
-        <article class="portfolio-item">
+
+        <article
+            class="portfolio-item reveal"
+        >
 
             <div class="portfolio-image">
 
                 <img
                     src="images/projekt-02.jpg"
-                    alt="Ausgewähltes Malstil-Projekt"
+                    alt="Malstil Projekt 02 – hochwertige Oberflächen"
+                    loading="lazy"
                 >
 
                 <div class="portfolio-overlay">
 
                     <span>
-                        Projekt Dielentor
+                        Projekt 02
                     </span>
 
                     <span class="portfolio-arrow">
@@ -488,41 +612,54 @@
 
             </div>
 
+
             <div class="portfolio-info">
 
                 <div>
+
                     <h3>
                         Hochwertige Oberflächen
                     </h3>
 
                     <p>
-                        Oberflächengestaltung · Detailarbeit · <a href="https://www.instagram.com/p/DATqx_7M-Zv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Quelle</a>
+                        Oberflächengestaltung · Detailarbeit
                     </p>
+
                 </div>
 
-                <span>
-                    
-                </span>
+                <a
+                    href="https://www.instagram.com/p/DATqx_7M-Zv/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Projekt 02 auf Instagram ansehen"
+                >
+                    ↗
+                </a>
 
             </div>
 
         </article>
 
 
+
         <!-- PROJEKT 03 -->
-        <article class="portfolio-item">
+
+        <article
+            class="portfolio-item reveal"
+        >
 
             <div class="portfolio-image">
 
                 <img
                     src="images/projekt-03.jpg"
-                    alt="Ausgewähltes Malstil-Projekt"
+                    alt="Malstil Projekt 03 – Malerarbeiten"
+                    loading="lazy"
                 >
 
                 <div class="portfolio-overlay">
 
                     <span>
-                        Projekt Stairs
+                        Projekt 03
                     </span>
 
                     <span class="portfolio-arrow">
@@ -533,48 +670,70 @@
 
             </div>
 
+
             <div class="portfolio-info">
 
                 <div>
+
                     <h3>
                         Klassische Malerarbeiten
                     </h3>
 
                     <p>
-                        Innenraum · Farbgestaltung · <a href="https://www.instagram.com/p/C537lTBr0GQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Quelle</a>
-    </div>
+                        Innenraum · Farbgestaltung
                     </p>
+
                 </div>
 
-                <span>
-                    
-                </span>
+                <a
+                    href="https://www.instagram.com/p/C537lTBr0GQ/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Projekt 03 auf Instagram ansehen"
+                >
+                    ↗
+                </a>
 
             </div>
 
         </article>
 
-    <div class="references-bottom">
+
+    </div>
+
+
+
+    <div class="references-bottom reveal">
 
         <p>
             Sie möchten Ihr eigenes Projekt verwirklichen?
         </p>
 
-        <a href="#kontakt" class="primary-button">
+        <a
+            href="#kontakt"
+            class="primary-button"
+        >
             Projekt anfragen →
         </a>
 
     </div>
 
+
 </section>
 
 
 
+<!-- ==================================================
+     KONTAKT
+================================================== -->
 
-        <!-- KONTAKT -->
-<section id="kontakt" class="contact">
+<section
+    id="kontakt"
+    class="contact"
+>
 
-    <div class="contact-intro">
+
+    <div class="contact-intro reveal">
 
         <p class="eyebrow">
             IHR PROJEKT
@@ -586,33 +745,38 @@
         </h2>
 
         <p class="contact-lead">
-            Sie planen eine Renovierung, möchten einen Raum neu
-            gestalten oder haben bereits eine konkrete Idee?
-            Erzählen Sie uns davon.
+            Sie planen eine Renovierung, möchten einen Raum
+            neu gestalten oder haben bereits eine konkrete
+            Idee? Erzählen Sie uns davon.
         </p>
 
     </div>
 
 
+
     <div class="contact-layout">
 
+
         <!-- KONTAKTDATEN -->
-        <div class="contact-details">
+
+        <div class="contact-details reveal">
 
             <p class="contact-label">
                 DIREKTER KONTAKT
             </p>
 
             <h3>
-                David Soujon
+                David Soujon &<br>
+                Jana Goble-Soujon
             </h3>
 
             <p class="contact-role">
-                Malerei & Raumgestaltung
+                Malermeister · Malerei & Raumgestaltung
             </p>
 
 
             <div class="contact-info">
+
 
                 <div class="contact-item">
 
@@ -649,12 +813,13 @@
                     <a
                         href="https://malstil.de"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
                     >
                         malstil.de ↗
                     </a>
 
                 </div>
+
 
             </div>
 
@@ -675,28 +840,38 @@
         </div>
 
 
+
         <!-- KONTAKTFORMULAR -->
-        <div class="contact-form-wrapper">
+
+        <div class="contact-form-wrapper reveal">
+
 
             <form
-    class="contact-form"
-    action="https://api.web3forms.com/submit"
-    method="POST"
->
+                class="contact-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+            >
 
-    <input
-        type="hidden"
-        name="access_key"
-        value="57c3f4a8-d303-47cf-92d4-249388ee71ad"
-    >
 
-    <input
-        type="hidden"
-        name="subject"
-        value="Neue Projektanfrage über Malstil"
-    >
+                <!-- WEB3FORMS -->
+
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="DEIN_WEB3FORMS_ACCESS_KEY"
+                >
+
+                <input
+                    type="hidden"
+                    name="subject"
+                    value="Neue Projektanfrage über Malstil"
+                >
+
+
+                <!-- NAME + TELEFON -->
 
                 <div class="form-row">
+
 
                     <div class="form-group">
 
@@ -709,6 +884,7 @@
                             id="name"
                             name="name"
                             placeholder="Max Mustermann"
+                            autocomplete="name"
                             required
                         >
 
@@ -726,12 +902,17 @@
                             id="phone"
                             name="phone"
                             placeholder="+49 ..."
+                            autocomplete="tel"
                         >
 
                     </div>
 
+
                 </div>
 
+
+
+                <!-- EMAIL -->
 
                 <div class="form-group">
 
@@ -744,11 +925,15 @@
                         id="email"
                         name="email"
                         placeholder="ihre@email.de"
+                        autocomplete="email"
                         required
                     >
 
                 </div>
 
+
+
+                <!-- PROJEKT -->
 
                 <div class="form-group">
 
@@ -756,39 +941,47 @@
                         Worum geht es?
                     </label>
 
-                    <select id="project" name="project">
+                    <select
+                        id="project"
+                        name="project"
+                        required
+                    >
 
-    <option value="">
-        Bitte auswählen
-    </option>
+                        <option value="">
+                            Bitte auswählen
+                        </option>
 
-    <option value="malerarbeiten">
-        Malerarbeiten
-    </option>
+                        <option value="malerarbeiten">
+                            Malerarbeiten
+                        </option>
 
-    <option value="raumgestaltung">
-        Raumgestaltung
-    </option>
+                        <option value="raumgestaltung">
+                            Raumgestaltung
+                        </option>
 
-    <option value="renovierung">
-        Renovierung
-    </option>
+                        <option value="renovierung">
+                            Renovierung
+                        </option>
 
-    <option value="oberflaechen">
-        Oberflächengestaltung
-    </option>
+                        <option value="oberflaechen">
+                            Oberflächengestaltung
+                        </option>
 
-    <option value="beratung">
-        Beratung / Projektidee
-    </option>
+                        <option value="beratung">
+                            Beratung / Projektidee
+                        </option>
 
-    <option value="sonstiges">
-        Sonstiges
-    </option>
+                        <option value="sonstiges">
+                            Sonstiges
+                        </option>
 
-</select>
+                    </select>
+
                 </div>
 
+
+
+                <!-- NACHRICHT -->
 
                 <div class="form-group">
 
@@ -797,15 +990,18 @@
                     </label>
 
                     <textarea
-    id="message"
-    name="message"
-    rows="5"
-    placeholder="Was möchten Sie gestalten? Wie groß ist das Projekt?"
-    required
-></textarea>
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Was möchten Sie gestalten? Wie groß ist das Projekt?"
+                        required
+                    ></textarea>
 
                 </div>
 
+
+
+                <!-- FORM FOOTER -->
 
                 <div class="form-footer">
 
@@ -823,61 +1019,75 @@
 
                 </div>
 
+
             </form>
 
-<div class="form-success" id="form-success">
 
-    <div class="success-icon">
-        ✓
-    </div>
 
-    <p class="eyebrow">
-        ANFRAGE ERHALTEN
-    </p>
+            <!-- ERFOLGSMELDUNG -->
 
-    <h3>
-        Vielen Dank für Ihre Anfrage.
-    </h3>
+            <div
+                class="form-success"
+                id="form-success"
+            >
 
-    <p>
-        Ihre Nachricht wurde erfolgreich übermittelt.
-        David Soujon wird sich schnellstmöglich bei Ihnen melden.
-    </p>
+                <div class="success-icon">
+                    ✓
+                </div>
 
-    <button
-        type="button"
-        class="success-reset"
-        id="success-reset"
-    >
-        Weitere Anfrage senden →
-    </button>
+                <p class="eyebrow">
+                    ANFRAGE ERHALTEN
+                </p>
 
-</div>
+                <h3>
+                    Vielen Dank für Ihre Anfrage.
+                </h3>
+
+                <p>
+                    Ihre Nachricht wurde erfolgreich übermittelt.
+                    David Soujon & Jana Goble-Soujon werden sich
+                    schnellstmöglich bei Ihnen melden.
+                </p>
+
+                <button
+                    type="button"
+                    class="success-reset"
+                    id="success-reset"
+                >
+                    Weitere Anfrage senden →
+                </button>
+
+            </div>
+
 
         </div>
 
     </div>
 
+
 </section>
 
 
-    </main>
+</main>
 
 
 
-    <!-- FOOTER -->
-    <footer>
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
-    <div>
+<footer>
+
+
+    <div class="footer-brand">
 
         <strong>
             MALSTIL
         </strong>
-<p>
-    Malermeister David Soujon & Jana Goble-Soujon
-</p>
+
         <p>
-            Malerei & Raumgestaltung
+            Malermeister David Soujon &
+            Jana Goble-Soujon
         </p>
 
     </div>
@@ -900,10 +1110,12 @@
 
     </div>
 
+
 </footer>
 
 
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 
